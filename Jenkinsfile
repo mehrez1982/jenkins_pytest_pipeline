@@ -8,12 +8,12 @@ pipeline {
         }
         stage ('run') {
             steps {
-                sh '/Users/tanhongyu/miniforge3/envs/jenkins_py/bin/python main.py'
+                sh '/Users/mehrez/miniforge3/envs/jenkins_py/bin/python main.py'
             }
         }
         stage ('test') {
             steps {
-                sh '/Users/tanhongyu/miniforge3/envs/jenkins_py/bin/python -m pytest test/'
+                sh '/Users/mehrez/miniforge3/envs/jenkins_py/bin/python -m pytest test/'
             }
         }
     }
