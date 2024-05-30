@@ -8,12 +8,12 @@ pipeline {
         }
         stage ('run') {
             steps {
-                sh '/var/lib/jenkins/workspace/jenkins_pytest_pipeline/python3 main.py'
+                sh 'python3 /var/lib/jenkins/workspace/jenkins_pytest_pipeline/main.py'
             }
         }
         stage ('test') {
             steps {
-                sh '/var/lib/jenkins/workspace/jenkins_pytest_pipeline/python3 -m pytest test/'
+                sh 'python3 -m pytest /var/lib/jenkins/workspace/jenkins_pytest_pipeline/test/'
             }
         }
     }
