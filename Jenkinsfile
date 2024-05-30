@@ -13,6 +13,7 @@ pipeline {
         }
         stage ('test') {
             steps {
+                sh 'pip3 list'
                 sh 'python3 -m pytest /var/lib/jenkins/workspace/jenkins_pytest_pipeline/test/'
             }
         }
