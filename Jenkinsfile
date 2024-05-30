@@ -8,12 +8,12 @@ pipeline {
         }
         stage ('run') {
             steps {
-                sh '/Users/mehrez/miniforge3/envs/jenkins_py/bin/python main.py'
+                sh '/var/lib/jenkins/workspace/jenkins_pytest_pipeline/python main.py'
             }
         }
         stage ('test') {
             steps {
-                sh '/Users/mehrez/miniforge3/envs/jenkins_py/bin/python -m pytest test/'
+                sh '/var/lib/jenkins/workspace/jenkins_pytest_pipeline/python -m pytest test/'
             }
         }
     }
